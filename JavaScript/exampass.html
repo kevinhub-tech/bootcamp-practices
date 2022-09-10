@@ -13,13 +13,13 @@
         <input type="text" name="name" id="name">
         <br><br>
         <label for="html">HTML</label>
-        <input type="number" name="html" id="html">
+        <input type="number" name="html" id="html" min="0" max="100">
         <br><br>
         <label for="css">CSS</label>
-        <input type="number" name="css" id="css">
+        <input type="number" name="css" id="css" min="0" max="100">
         <br><br>
         <label for="js">JavaScript</label>
-        <input type="number" name="js" id="js">
+        <input type="number" name="js" id="js" min="0" max="100">
         <br><br>
         <button type="button" onclick="result()">Result</button>
     </form> 
@@ -36,12 +36,32 @@
             console.log(js);
 
             if(html >= 50 && css >= 50 && js >= 50){
-            document.write('<h1>'+name+ ' Deez nuts, you passed!</h1>')
-            }else{
-                document.write('<h1>'+ name + ', just delete the game lol. Fucking noob</h1>')
+                if(html >=80 || css >=80 || js >= 80){
+                document.write('<h1>Dear '+ name + ' You have passed the exam with distinction</h1>' )
+                if(html >=80){
+                    document.write(' <table border="3" cellspacing="0" cellpadding="15"><tr><td>Subject</td><td>Mark</td></tr><tr><td> HTML</td><td>'+html+'</td></tr></table>')
+                }if(css >=80){
+                    document.write('<h1>You have passed the exam with'+css+ ' mark in css</h1>')
+                }
+                if(js >=80){
+                    document.write('<h1>You have passed the exam with'+js+ ' mark in js</h1>')
+                }
+            }else{document.write('<h1>'+name+ ' you have passed!</h1>')
             }
         }
-
+            else{
+                document.write('<h1>'+name+ ' you have failed!</h1>')
+                if(html <50){
+                    document.write('<h1>You have failed in HTML with the mark of : '+html+'</h1>')
+                }
+                if(css <50){
+                    document.write('<h1>You have failed in CSS with the mark of : '+css+'</h1>')
+                }
+                if(js <50){
+                    document.write('<h1>You have failed in HTML with the mark of : '+js+'</h1>')
+                }
+            }
+        }
         
     </script>
 </body>
