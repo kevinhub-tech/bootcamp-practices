@@ -6,38 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        input[type='number']{
-            width:150px;
-            padding-left: 20px;
-        }
 
+body {
+    margin:250px 50px 150px 100px; padding:0px;
+    text-align:center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    border-radius: 10px;
+    display: inline-block;
+    padding: 40px 70px 70px 90px;
+    background-color: gray;
+}
 label{
     display: inline-block;
+    width: 160px;
+    margin-left: -160px;
+    text-align: right;
+}
 
+input[type='number']{
+    width: 170px;
+}
 
+input {
+  display: inline-block;
+  position: relative;
+  width: 170px;
+  height: 20px;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#h1name{
+    text-align:center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
 }
     </style>
 </head>
 <body>
-    <h1 align="center">Exam Pass</h1>
-    <div clas="container">
+    <div class="container">
+    <h1 align="center">Exam Result</h1>
+    
     <form action="" name="myForm" align="center">
-        <label for="name">Name</label>
-        <input class="name" type="text" name="name" id="name">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name">
         <br><br>
-        <label for="html">HTML</label>
-        <input class="html" type="number" name="html" id="html" min="0" max="100">
+        <label for="html">HTML: </label>
+        <input type="number" name="html" id="html" min="0" max="100">
         <br><br>
-        <label for="css">CSS</label>
-        <input class="css" type="number" name="css" id="css" min="0" max="100">
+        <label for="css">CSS: </label>
+        <input type="number" name="css" id="css" min="0" max="100">
         <br><br>
-        <label class="js" for="js">JavaScript</label>
-        <input class="js" type="number" name="js" id="js" min="0" max="100">
+        <label for="js">JavaScript: </label>
+        <input type="number" name="js" id="js" min="0" max="100">
         <br><br>
-        <button type="button" onclick="result()">Result</button>
+        <button class="button button4" type="button" onclick="result()">Result</button>
     </form> 
 </div>
     <script>
+
         function result(){
             // alert('Hello');
             let name = document.myForm.name.value;
@@ -53,12 +97,12 @@ label{
                 if(html >=80 || css >=80 || js >= 80){
                 document.write('<h1>Dear '+ name + ' You have passed the exam with distinction</h1>' )
                 if(html >=80){
-                    document.write(' <table border="3" cellspacing="0" cellpadding="15"><tr><td>Distinction Subject</td><td>Mark</td></tr><tr><td> HTML</td><td>'+html+'</td></tr></table>')
+                    document.write(' <table border="3" cellspacing="0" cellpadding="15"><tr><td>Distinction Subject</td><td>Mark</td></tr><tr><td> HTML</td><td>'+html+'</td></tr></table><br>')
                 }if(css >=80){
-                    document.write('<table border="3" cellspacing="0" cellpadding="15"><tr><td>Distinction Subject</td><td>Mark</td></tr><tr><td> CSS</td><td>'+css+'</td></tr></table>')
+                    document.write('<table border="3" cellspacing="0" cellpadding="15"><tr><td>Distinction Subject</td><td>Mark</td></tr><tr><td> CSS</td><td>'+css+'</td></tr></table><br>')
                 }
                 if(js >=80){
-                    document.write('<table border="3" cellspacing="0" cellpadding="15"><tr><td>Distinction Subject</td><td>Mark</td></tr><tr><td> JS</td><td>'+js+'</td></tr></table>')
+                    document.write('<table border="3" cellspacing="0" cellpadding="15"><tr><td>Distinction Subject</td><td>Mark</td></tr><tr><td> JS</td><td>'+js+'</td></tr></table><br>')
                 }
             }else{document.write('<h1>'+name+ ' you have passed!</h1>')
             }
@@ -66,13 +110,13 @@ label{
             else{
                 document.write('<h1>'+name+ ' you have failed!</h1>')
                 if(html <50){
-                    document.write('<h1>You have failed in HTML with the mark of : '+html+'</h1>')
+                    document.write('<h4>You have failed in HTML with the mark of : '+html+'</h4>')
                 }
                 if(css <50){
-                    document.write('<h1>You have failed in CSS with the mark of : '+css+'</h1>')
+                    document.write('<h4>You have failed in CSS with the mark of : '+css+'</h4>')
                 }
                 if(js <50){
-                    document.write('<h1>You have failed in JS with the mark of : '+js+'</h1>')
+                    document.write('<h4>You have failed in JS with the mark of : '+js+'</h4>')
                 }
             }
         }
