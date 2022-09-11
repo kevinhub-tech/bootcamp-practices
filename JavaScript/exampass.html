@@ -11,6 +11,7 @@ body {
     margin:250px 50px 150px 100px; padding:0px;
     text-align:center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 
 .container{
@@ -35,13 +36,15 @@ input {
   position: relative;
   width: 170px;
   height: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 .button {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 4px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -66,16 +69,16 @@ input {
     
     <form action="" name="myForm" align="center">
         <label for="name">Name: </label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" value="Kevin">
         <br><br>
         <label for="html">HTML: </label>
-        <input type="number" name="html" id="html" min="0" max="100">
+        <input type="number" name="html" id="html" min="0" max="100" value="50">
         <br><br>
         <label for="css">CSS: </label>
-        <input type="number" name="css" id="css" min="0" max="100">
+        <input type="number" name="css" id="css" min="0" max="100" value="50">
         <br><br>
         <label for="js">JavaScript: </label>
-        <input type="number" name="js" id="js" min="0" max="100">
+        <input type="number" name="js" id="js" min="0" max="100" value="50">
         <br><br>
         <button class="button button4" type="button" onclick="result()">Result</button>
     </form> 
@@ -93,33 +96,68 @@ input {
             let js = document.myForm.js.value;
             console.log(js);
 
-            if(html >= 50 && css >= 50 && js >= 50){
+            if(html<0 || html>100 || css<0 ||css>100 || js<0 || js>100){
+                alert('Please insert between 0 to 100.');
+            }
+            else if(html >= 50 && css >= 50 && js >= 50){
                 if(html >=80 || css >=80 || js >= 80){
-                document.write('<h1>Dear '+ name + ' You have passed the exam with distinction</h1>' )
+                document.write(`<div class="container"><h1>Dear ${name}, You have passed the exam with distinction!</h1>` )
                 if(html >=80){
-                    document.write(' <table border="3" cellspacing="0" cellpadding="15"><tr><td>Distinction Subject</td><td>Mark</td></tr><tr><td> HTML</td><td>'+html+'</td></tr></table><br>')
+                    document.write(`<div class="htmltable"><table border="3" cellspacing="0" cellpadding="15"><tr><td>Distinction Subject</td><td>Mark</td></tr><tr><td> HTML</td><td> ${html} </td></tr></table><br></div>`)
                 }if(css >=80){
-                    document.write('<table border="3" cellspacing="0" cellpadding="15"><tr><td>Distinction Subject</td><td>Mark</td></tr><tr><td> CSS</td><td>'+css+'</td></tr></table><br>')
+                    document.write(`<div class="csstable"><table border="3" cellspacing="0" cellpadding="15"><tr><td>Distinction Subject</td><td>Mark</td></tr><tr><td> CSS</td><td> ${css}</td></tr></table><br></div>`)
                 }
                 if(js >=80){
-                    document.write('<table border="3" cellspacing="0" cellpadding="15"><tr><td>Distinction Subject</td><td>Mark</td></tr><tr><td> JS</td><td>'+js+'</td></tr></table><br>')
+                    document.write(`<div class="jstable"><table border="3" cellspacing="0" cellpadding="15"><tr><td>Distinction Subject</td><td>Mark</td></tr><tr><td> JS</td><td>${js}</td></tr></table><br></div>`)
                 }
-            }else{document.write('<h1>'+name+ ' you have passed!</h1>')
+            }else{document.write(`<div class="container"><h1> ${name}  you have passed!</h1></div>`)
             }
         }
             else{
-                document.write('<h1>'+name+ ' you have failed!</h1>')
+                document.write(`<div class="container"><h1> ${name} you have failed!</h1>`)
                 if(html <50){
-                    document.write('<h4>You have failed in HTML with the mark of : '+html+'</h4>')
+                    document.write(`<h4>You have failed in HTML with the mark of : <span style="color:red;">${html}</h4>`)
                 }
                 if(css <50){
-                    document.write('<h4>You have failed in CSS with the mark of : '+css+'</h4>')
+                    document.write(`<h4>You have failed in CSS with the mark of : <span style="color:red;">${css}</h4>`)
                 }
                 if(js <50){
-                    document.write('<h4>You have failed in JS with the mark of : '+js+'</h4>')
+                    document.write(`<h4>You have failed in JS with the mark of : <span style="color:red;">${js}</h4></div>`)
                 }
             }
+            
+        const style= document.createElement('style');
+        style.innerHTML=`
+            body {
+                margin:250px 50px 150px 100px; padding:0px;
+                text-align:center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+            }
+
+            .container{
+                border-radius: 10px;
+                display: inline-block;
+                padding: 40px 70px 70px 90px;
+                background-color: gray;
+                
+            }
+            
+            .htmltable{
+            display:inline-flex;
+            }
+
+            .csstable{
+            display:inline-flex;
+            }
+            .jstable{
+            display:inline-flex;
+            }
+            `;
+        document.head.appendChild(style);
         }
+
+
+
         
     </script>
 </body>
