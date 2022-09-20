@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">CSS Manipulation with DOM</h1>
+    <button onclick="action()">Action</button>
+    <br><br>
+    <img src="images.png" id="img" alt="javascript1 image" width="400" height="200"></img>
+    <br><br>
+    <img src="javascript.jpg" id="image" alt="another javascript image" width="400" height="200" onmouseover="big()" onmouseout="normal()"></img>
+    <script>
+        function action(){
+            //alert('Hello Bitch');
+            let img = document.querySelector('#img');
+            img.style.width = '600px';
+            img.style.height = '300px';
+
+            document.querySelector('#heading').style.color = 'red';
+            document.querySelector('#heading').style.backgroundColor = 'black';
+        }
+
+        let image = document.querySelector('#image');
+        function big(){
+            console.log('big');
+            image.style.width= '600px';
+            image.style.height= '300px';    
+        }
+        function normal(){
+            console.log('normal');
+            image.style.width= '400px';
+            image.style.height= '200px';  
+        }
+    </script>
+</body>
+</html>
