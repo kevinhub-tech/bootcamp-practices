@@ -7,9 +7,9 @@ h1{
 
 /* universal selector */
 *{
-    color:green;
-    /* margin:0px;
-    padding:0px; */
+    /* color:green; */
+    margin:0px;
+    padding:0px;
 }
 
 /* tag/element selector */
@@ -22,4 +22,56 @@ small{
     color:brown;
     font-size: 24px;
     font-style: italic;
+}
+
+/* Attribute Selector */
+a[title="Google"]{
+    color:red;
+}
+
+/* ID selector */
+#idselector{
+    color:blue;
+}
+
+/* Class selector */
+.classselector{
+    color:blueviolet;
+    font-size:x-large;
+    word-spacing: 20px;
+    line-height: 30px;
+}
+
+/* desc selector */
+.desc a{
+    color:red;
+}
+
+/* Child selector */
+.child>a{
+    color:yellow;
+}
+
+/* Pseudo Selector */
+a:link{
+    color:red;
+}
+
+a:hover{
+    color:orange;
+    letter-spacing: 10px;
+}
+
+a:active{
+    color:green;
+}
+
+a:visited{
+    color:brown;
+}
+
+/* target */
+:target{
+    color:red;
+    border:1px solid black;
 }
