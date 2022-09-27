@@ -100,3 +100,97 @@ a:visited{
     border-style: dashed solid double dotted;
     /* T / R / B / L */
 }
+
+/* Margin */
+.marginone{
+    border: 1px solid black;
+    margin: 50px 0px 20px 100px;
+    /* Work the same as the border ones regarding to the position: T B R L */
+}
+
+.margintwo{
+    border: 1px solid red;
+    margin-top:50px;
+    margin-left:20px;
+}
+
+/* Padding */
+.padding{
+    border: 1px solid green;
+    padding-top: 40px;
+}
+
+/* Layout */
+.inline{
+    border: 1px solid red;
+    width: 300px;
+    display: inline-block;
+}
+
+.block{
+    border: 1px solid black;
+    width: 300px;
+    display: inline-block;
+}
+
+/* Float */
+
+.float_left img{
+    width:400px;
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+.float_right img{
+    width: 400px;
+    float: right;
+}
+
+/* Grid */
+.grid1 div,
+.grid2 div,
+.grid3 div,
+.grid4 div,
+.grid5 div,
+.grid6 div{
+    padding: 20px;
+    text-align: center;
+    color:white;
+}
+
+.grid1,
+.grid2,
+.grid3,
+.grid4,
+.grid5,
+.grid6{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid2{
+    grid-column-gap: 50px;
+}
+
+.grid3{
+    grid-row-gap: 20px;
+}
+
+.grid4{
+    /* grid-gap: 50px; */
+    grid-row-gap:20px;
+    grid-column-gap: 50px;
+}
+
+.columnadd{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.rowadd{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
