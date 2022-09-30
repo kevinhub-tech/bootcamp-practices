@@ -194,3 +194,56 @@ a:visited{
     grid-row-start: 1;
     grid-row-end: 3;
 }
+
+/* Position */
+.relative_parent{
+    border: 1px solid red;
+    width: 1000px;
+    height: 500px;
+}
+
+.relative{
+    border: 1px solid yellow;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    top:100px;
+    left:50px;
+}
+.absolute_parent{
+    border: 1px solid green;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+.absolute{
+    border: 1px solid brown;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    top:100px;
+    right: 50px;
+}
+
+.fixed{
+    position: fixed;
+    top:100px;
+    right: 50px;
+}
+
+/* Font */
+.online{
+    font-family: 'Noto Sans Mono', monospace;
+    font-size:21px;
+}
+
+@font-face {
+    font-family: Noto;
+    src: url(Noto_Sans_Mono/NotoSansMono-VariableFont_wdth\,wght.ttf);
+}
+
+.offline{
+    font-family: Noto;
+    font-size: 21px;
+    font-weight: 200;
+}
