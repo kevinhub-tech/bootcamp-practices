@@ -51,6 +51,18 @@
     display: inline-block;
 }
 
+.cart_noti{
+    position: relative;
+    top: -18px;
+    left: -5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+}
 /* banner */
 
 .banner img{
@@ -130,7 +142,7 @@
 .product_img{
     width: 100%;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px#888888;
+    box-shadow: 2px 2px 20px #888888;
 }
 
 .add_to_cart{
@@ -152,4 +164,56 @@
     color:red;
     font-size: 13px;
     text-decoration: line-through;
+}
+
+/* About Section */
+.about{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-image: url(../images/background.jpg);
+    margin-top:50px;
+    text-align: center;
+    color:#fff;
+    padding: 60px 30px;
+    
+}
+
+.divid{
+    width: 50px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Packaging */
+.packaging{
+    margin-top:50px;
+    margin-left:100px;
+}
+
+.packaging img{
+    border-radius: 5px;
+    width: 40%;
+    float:left;
+}
+
+.packaging_text{
+    position: relative;
+    left:50px;
+    width: 90%;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.packaging_text h1{
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+.packaging_header {
+    margin-top: 20px;
+}
+
+.fa-circle-arrow-right{
+    margin-right:10px;
 }
