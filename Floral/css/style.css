@@ -193,7 +193,7 @@
 
 .packaging img{
     border-radius: 5px;
-    width: 40%;
+    width: 30%;
     float:left;
 }
 
@@ -216,4 +216,55 @@
 
 .fa-circle-arrow-right{
     margin-right:10px;
+}
+
+.clear{
+    clear: both;
+}
+
+.service{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: #e0ebee;
+    margin-top: 50px;
+    padding-left: 150px;
+}
+
+.service_icon p{
+    display: inline-block;
+    line-height: 30px;
+    margin-left: 25px;
+}
+
+.service_icon p span{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.service_icon{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* Footer */
+.footer{
+    background-color: #000000;
+}
+
+.footer .center .footer_nav{
+    color:gray;
+    text-decoration: none;
+    display: inline-block;
+    margin: 50px 20px 20px 20px;
+
+}
+
+.footer .center p{
+    color:white;
+}
+
+.footer_icon{
+    color: gray;
+    display: inline-block;
+    margin: 20px 10px;
 }
