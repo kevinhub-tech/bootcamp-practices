@@ -122,7 +122,8 @@
     width: 130px;
     margin: auto;
     margin-top: 5px;
-    border: 2px solid #266a79;
+    padding: 1px;
+    background-color: #266a79;
 }
 
 /* Products */
@@ -272,7 +273,7 @@
     margin: 20px 10px;
 }
 
-/* About us */
+/* About us Page CSS*/
 
 .aboutus img{
     width: 100%;
@@ -419,6 +420,8 @@
     margin: 20px 10px;
 }
 
+
+/* Contact Us Page CSS */
 .contactus_heading{
     background-color: #e0ebee;
     padding: 150px;
@@ -558,7 +561,7 @@ input[type="date"]:focus{
     line-height: 30px;
 }
 
-/* Blog */
+/* Blog Page CSS*/
 
 .blog_heading h1{
     text-align: center;
@@ -742,4 +745,33 @@ input[type="date"]:focus{
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.9;
+}
+
+/* Shop Page CSS */
+.hotoffer_products{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    grid-gap: 40px;
+    text-align: center;
+}
+
+.hotoffer_products p{
+    margin-top: 10px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.product_img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px #888888;
+}
+
+.buy2get1{
+    color: green;
+    font-size: 13px;
+    text-decoration: solid underline;
 }
