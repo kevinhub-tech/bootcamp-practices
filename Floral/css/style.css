@@ -504,6 +504,7 @@
     border-style: none;
     border-radius: 5px;
     color: black;
+    cursor: pointer;
 }
 
 .contact_submit:hover{
@@ -555,4 +556,52 @@ input[type="date"]:focus{
     margin-right: 140px;
     font-size: 20px;
     line-height: 30px;
+}
+
+/* Blog */
+
+.blog_heading h1{
+    text-align: center;
+    font-family: Cabin;
+    text-transform: uppercase;
+    color: #266a79;
+}
+
+.blog_heading hr{
+    width: 50px;
+    margin: auto;
+    padding: 1px;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    background-color:#266a79;
+}
+
+.blog{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 60px;
+}
+
+.megablog{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-gap: 120px;
+    text-align: center;
+    cursor: pointer;
+}
+.megablog img{
+    position: relative;
+    top: -55px;
+}
+.megablog_text{
+    position: relative;
+    text-align: left;
+    top: -50px;
+    left: 210px;
+}
+
+.normalblog img{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
