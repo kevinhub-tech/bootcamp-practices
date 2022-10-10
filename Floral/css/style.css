@@ -479,6 +479,10 @@
     font-family: Cabin;
 }
 
+.contactus_backcard a{
+    scroll-behavior: smooth;
+}
+
 /* Contact Us Form */
 .contactus_form{
     display: grid;
@@ -487,6 +491,26 @@
     margin-top: 50px;
 }
 
+.contactus_form p{
+    margin-left: 2px;
+    line-height: 40px;
+}
+
+.contact_submit{
+    position: relative;
+    left: 220px;
+    padding: 10px 40px;
+    background-color: #e0ebee;
+    border-style: none;
+    border-radius: 5px;
+    color: black;
+}
+
+.contact_submit:hover{
+    background-color: #266a79;
+    transition-duration: 0.4s;
+    color: #fff;
+}
 .form{
     width: 70%;
     margin: auto;
@@ -510,4 +534,25 @@ input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="date"]:focus{
     border: 2px solid #ccc;
+}
+
+/* Location */
+.location{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-left: 140px;
+    margin-top: 40px;
+}
+
+.location_text{
+    padding: 100px 20px;
+    font-family: Cabin;
+}
+
+.location_desc{
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 140px;
+    font-size: 20px;
+    line-height: 30px;
 }
