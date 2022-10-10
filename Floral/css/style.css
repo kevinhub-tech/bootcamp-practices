@@ -591,7 +591,7 @@ input[type="date"]:focus{
 }
 .megablog img{
     position: relative;
-    top: -55px;
+    top: -56px;
 }
 .megablog_text {
     position: relative;
@@ -628,4 +628,118 @@ input[type="date"]:focus{
     background-color: #266a79;
     transition-duration: 0.4s;
     color: #fff;
+}
+
+.divide{
+    position: relative;
+    top: 20px;
+    bottom: 120px;
+}
+.divide hr{
+    width: 70%;
+    margin: auto;
+    padding: 1px;
+    background-color:#000002;
+}
+
+.video_blog{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #266a79;
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-left: 120px;
+    margin-right: 40px;
+    padding: 15px 20px 15px;
+    color: #fff;
+}
+
+.youtube_tag{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: relative;
+    top: 100px;
+    padding: 100px 100px;
+}
+
+.video_blog h1{
+    font-family: Cabin;
+    color: #fff;
+}
+.video_blog p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+
+.videoblog_button{
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #888888;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+}
+
+.videoblog_button:hover{
+    background-color: #e0ebee;
+    transition-duration: 0.4s;
+    color: #000000;
+}
+
+.youtube_video{
+    margin-top: 20px;
+    box-shadow:2px 2px 104px #888888;
+}
+
+.newevents{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-column-gap: 20px;
+    font-family: Cabin;
+}
+
+.grandopening{
+    height: 400px;
+    background-image: url(../images/grandopening.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.grandopening h5{
+    display: inline-block;
+    margin-top:300px;
+    padding: 10px 5px;
+    background-color: orange;
+}
+
+.grandopening h2{
+    margin-top: 10px;
+    color: #fff;
+}
+
+.class h5{
+    display: inline-flex;
+    margin-top:300px;
+    padding: 10px 5px;
+    background-color: yellow;
+    color: black;
+}
+
+.class h2{
+    margin-top: 10px;
+    color: #fff;
+}
+.class{
+    text-align: right;
+    height: 400px;
+    background-image: url(../images/class.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
 }
