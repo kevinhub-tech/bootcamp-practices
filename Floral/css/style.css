@@ -593,15 +593,39 @@ input[type="date"]:focus{
     position: relative;
     top: -55px;
 }
-.megablog_text{
+.megablog_text {
     position: relative;
     text-align: left;
     top: -50px;
-    left: 210px;
+    left: 195px;
 }
 
+.megablog_text h3{
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
 .normalblog img{
     float: left;
     margin-right: 20px;
     margin-bottom: 20px;
+}
+
+.normalblog h3{
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.blog_button{
+    margin-top: 10px;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: 1px solid #888888;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.blog_button:hover{
+    background-color: #266a79;
+    transition-duration: 0.4s;
+    color: #fff;
 }
