@@ -724,6 +724,7 @@ input[type="date"]:focus{
 .grandopening h2{
     margin-top: 10px;
     color: #fff;
+    font-family: Lobster;
 }
 
 .class h5{
@@ -737,6 +738,7 @@ input[type="date"]:focus{
 .class h2{
     margin-top: 10px;
     color: #fff;
+    font-family: Lobster;
 }
 .class{
     text-align: right;
